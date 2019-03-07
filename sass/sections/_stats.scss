@@ -1,0 +1,46 @@
+/// <section> STATS
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
+  @media(max-width: em(600)) {
+    flex-direction: column;
+  }
+
+  //. <div> BOX
+  &__box {
+    flex: 1;
+    padding: 0 5rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    @media(max-width: em(1100)) {
+      flex: 0 0 50%;
+      padding: 2rem 0 2rem;
+    }
+  }
+
+  // <div>
+  &__value {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: $header-color;
+    letter-spacing: 1rem;
+  }
+
+  // <div>
+  &__key {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #03cbd8;
+    letter-spacing: .1rem;
+  }
+}
+///

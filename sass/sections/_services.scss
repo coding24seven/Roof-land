@@ -1,0 +1,124 @@
+/// <section> SERVICES
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 7rem 4rem 6rem;
+
+  @media(max-width: em(700)) {
+    // flex-direction: column;
+    display: table;
+    padding: 4rem 6rem 3rem;
+  }
+  // 500px
+  @media(max-width: 31.25em) {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6rem 3rem;
+  }
+
+  //. <div> TYPE OF SERVICE
+  &__type {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 30%;
+    padding: 0 2.3rem;
+
+    @media(max-width: em(700)) {
+      padding: 0; // padding has no effect anyway with 'display: table-row'
+      display: table-row;
+    }
+    // 500px
+    @media(max-width: 31.25em) {
+      display: flex;
+      margin-bottom: 4rem;
+    }
+  }
+
+  //, <div> BOX FOR THE ICON AND HEADING
+  .services__icon-and-heading-box {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.7rem;
+
+    @media(max-width: em(700)) {
+      padding-right: 4rem;
+      padding-bottom: 3rem;
+      display: table-cell;
+      text-align: center;
+    }
+    // 500px
+    @media(max-width: 31.25em) {
+      display: flex;
+      padding: 0;
+      margin-bottom: 1.1rem;
+    }
+  }
+
+  // <svg> ICON
+  &__icon {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    padding: 1.4rem;
+    margin-bottom: 1.4rem;
+    background-color: $header-color;
+    fill: white;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: all .1s .03s;
+
+    @media(max-width: em(700)) {
+      height: 2.3rem;
+      width: 2.3rem;
+      margin-bottom: 1rem;
+    }
+    // 500px
+    @media(max-width: 31.25em) {
+      margin-bottom: 1.3rem;
+    }
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  // change the sibling heading's appearance on hover
+  &__icon:hover~&__heading {
+    color: $hover-color;
+  }
+
+  // <h3>
+  &__heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    transition: all .1s .03s;
+    color: $header-color;
+
+    @media(max-width: em(700)) {
+      font-size: 1.6rem;
+    }
+  }
+
+  //, <p>
+  &__description {
+    font-size: 1.6rem;
+    text-align: center;
+    color: $color-gray-light;
+
+    @media(max-width: em(700)) {
+      display: table-cell;
+      text-align: left;
+      vertical-align: top;
+      // padding-top: 1rem;
+    }
+    // 500px
+    @media(max-width: 31.25em) {
+      display: block;
+      text-align: center;
+    }
+  }
+}

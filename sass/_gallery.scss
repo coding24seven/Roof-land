@@ -1,0 +1,87 @@
+/// <div> GALLERY
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  //. <figure> ITEM
+  &__item {
+    // cursor: zoom-in;
+    position: relative;
+
+    flex-basis: 16.66%;
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      flex: 0 0 33.33%;
+    }
+
+    // 1000px
+    @media(max-width: 62.5em) {
+      flex-basis: 25%;
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        flex: 0 0 50%;
+      }
+    }
+    // 700px
+    @media(max-width: em(700)) {
+      flex-basis: 33.33%;
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        flex: 0 0 66.66%;
+      }
+    }
+    // 500px
+    @media(max-width: 31.25em) {
+      flex-basis: 50%;
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        flex: 0 0 100%;
+      }
+    }
+  }
+  &__item:hover &__tinted-glass {
+    opacity: 1;
+  }
+
+  //, <img> PHOTO
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+
+  //, <div> TINTED GLASS
+  &__tinted-glass {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(black, 0.7);
+    transition: all .3s .03s;
+  }
+
+  // <button> BUTTONS
+  &__button {
+    padding: .4rem;
+    border-radius: .6rem;
+    outline: none;
+    // border: none;
+    cursor: pointer;
+  }
+
+  // <i> ICONS
+  &__fas {
+    font-size: 1.4rem;
+  }
+
+  // <i> CHAINLINK ICON
+  &__fa-link {
+    transform: rotate(90deg);
+  }
+}
+///

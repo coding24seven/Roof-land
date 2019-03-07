@@ -1,0 +1,222 @@
+/// <section> SLOGAN
+.slogan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  //. <div> PHOTO BOX
+  &__photo-box {
+    width: 100%;
+    height: $slogan-photo-height;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @media(max-width: em(900)) {
+      height: auto;
+    }
+    @media(max-width: em(600)) {
+      height: calc(#{$slogan-photo-height} * 2);
+    }
+  }
+
+  //, <img> EACH PHOTO behind the box with slogan text
+  // <img> all slogan photos have this class
+  &__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // <img>
+  &__photo-2,
+  &__photo-3 {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+  }
+
+  // <img> this photo is shown if only one photo is shown
+  &__photo.js-slogan-photo-to-stay-on-top {
+    opacity: 1;
+  }
+
+  // ANIMATION: show all photos animated in turn instead of just one photo
+  &__photo.js-slogan-photos-show-all {
+    animation-name: slogan-photo-carousel;
+    animation-duration: $slogan-photo-animation-duration;
+    animation-iteration-count: $slogan-photo-animation-iteration-count;
+  }
+
+  &__photo-1 {
+    animation-delay: $slogan-photo-animation-delay-1;
+  }
+  &__photo-2 {
+    animation-delay: $slogan-photo-animation-delay-2;
+  }
+  &__photo-3 {
+    animation-delay: $slogan-photo-animation-delay-3;
+  }
+
+  // fade overlapping photos into one another
+  @keyframes slogan-photo-carousel {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 1;
+    }
+    53% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  //, <div> SELECTOR BOX for the small circles that select the photos
+  &__photo-selector-box {
+    position: absolute;
+    display: flex;
+  }
+
+  // <div> each circle that selects the photo
+  &__photo-selector {
+    position: relative;
+    box-sizing: content-box;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 2rem 2rem;
+    background-clip: content-box; // so the padding is not painted with background-color
+    padding: .5rem;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media (max-width: em(700)) {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0 1rem 1rem;
+    }
+
+    // mark each selector when hovered by overlaying it with :after element
+    &:hover:after {
+      background-color: $hover-color;
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inherit;
+      // width: calc(100% + .2rem);
+      // height: calc(100% + .2rem);
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      transition: all .2s .03s;
+      content: "";
+    }
+  }
+
+  // this selector is highlighted when its corresponding photo is shown in single-photo-mode
+  &__photo-selector.js-slogan-photo-to-stay-on-top {
+    background-color: $hover-color;
+  }
+
+  // ANIMATION: change selector color while all photos are animated in turn, by using the same animation-enabling class name that is used on each photo
+  &__photo-selector.js-slogan-photos-show-all {
+    animation-name: slogan-photo-selector-carousel;
+    animation-duration: $slogan-photo-animation-duration;
+    animation-iteration-count: $slogan-photo-animation-iteration-count;
+  }
+
+  &__photo-selector-1 {
+    animation-delay: $slogan-photo-animation-delay-1;
+  }
+  &__photo-selector-2 {
+    animation-delay: $slogan-photo-animation-delay-2;
+  }
+  &__photo-selector-3 {
+    animation-delay: $slogan-photo-animation-delay-3;
+  }
+
+  @keyframes slogan-photo-selector-carousel {
+    0% {
+      background-color: #f5f5f5;
+    }
+    20% {
+      background-color: $hover-color;
+    }
+    33% {
+      background-color: $hover-color;
+    }
+    53% {
+      background-color: #f5f5f5;
+    }
+    100% {
+      background-color: #f5f5f5;
+    }
+  }
+  //. <div> BOX CONTAINING THE SLOGAN TEXT
+  &__text-box {
+    position: absolute;
+    width: 41%;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.2rem 2.4rem;
+    border-radius: 5px 0 0 5px;
+    color: rgb(245, 245, 245);
+    background-color: rgba($header-color, .8);
+    text-transform: uppercase;
+    text-align: right;
+    box-shadow: -.1rem .1rem .2rem #2f2f2f;
+
+    @media(max-width: em(1200)) {
+      width: 36%;
+      text-align: center;
+      padding-right: 17rem;
+    }
+
+    @media (max-width: em(800)) {
+      position: relative;
+      width: 100%;
+      padding-right: 2.4rem;
+      background-image: linear-gradient(to bottom, #e3e3e3, #fefefe);
+      color: $header-color;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  //, <h1> SLOGAN TEXT containing two children <span>
+  &__text {
+    display: flex;
+    flex-direction: column;
+    // flex: 0 0 67%;
+    font-family: $font-family-2;
+    font-size: 2.3rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-shadow: 3px 2px #464646;
+
+    @media (max-width: em(800)) {
+      flex: 1;
+      font-weight: 800;
+      text-shadow: none;
+      font-size: 2.4rem;
+    }
+    @media (max-width: em(400)) {
+      font-size: 2.4rem;
+      line-height: 1.4;
+    }
+  }
+}

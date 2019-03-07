@@ -1,0 +1,38 @@
+/// css custom properties / variables
+/// <root> pseudo element is the same as <html> but has higher specificity
+:root {
+  // --line: 1px solid var(--color-grey-light-2); // example
+}
+/// sass variables
+//. FONT
+$font-family: 'Montserrat', sans-serif;
+$font-family-2: 'Raleway', sans-serif;
+$font-size: 62.5%;
+//. COLOR
+$color-gray-light:#5d5d5d;
+
+//. CONTAINER
+$container-width: 120rem;
+
+//. HEADER
+$header-color: #313332;
+$header-height: 7rem;
+$hover-color: #00c7e8;
+
+//. SLOGAN
+// shared by all slogan photos
+$slogan-photo-height: 24vw;
+$slogan-photo-animation-duration: 9s;
+$slogan-photo-animation-iteration-count: 1;
+
+// each slogan photo animation has its own delay
+$slogan-photo-animation-delay-1: 0s;
+$slogan-photo-animation-delay-2: 3s;
+$slogan-photo-animation-delay-3: 6s;
+
+//. MEDIA QUERY BREAKPOINTS
+@function em($pixels) {  
+  @return #{$pixels/16}em
+ }
+
+$bp-burger: em(900);

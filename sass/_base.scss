@@ -1,0 +1,28 @@
+/// <*>
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; // remove highlight on touch
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/// <html>
+html {
+  box-sizing: border-box;
+  font-size: $font-size;
+}
+/// <body>
+body {
+  padding-top: $header-height;
+  font-family: $font-family;
+  min-height: 100vh; // push down the footer on small-height pages, make 'background-image: linear-gradient' always cover the full height
+  color: black;
+}
+
+/// <p>
+p {
+  line-height: 1.4;
+}

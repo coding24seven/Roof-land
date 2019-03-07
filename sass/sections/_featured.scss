@@ -1,0 +1,37 @@
+/// <section> FEATURED
+.featured {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 7rem;
+
+  @media(max-width: em(700)) {
+    margin-bottom: 5rem;
+  }
+
+  //. <h2> HEADING
+  &__heading {
+    padding: 0 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-size: 3.2rem;
+    font-family: $font-family-2;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $header-color;
+    letter-spacing: .2rem;
+    text-shadow: -0.1rem 0 black;
+    @media(max-width: em(600)) {
+      font-size: 2.9rem;
+    }
+  }
+
+  //. <p> DESCRIPTION
+  &__description {
+    padding: 0 4rem;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    color: $color-gray-light;
+  }
+}
+///

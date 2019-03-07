@@ -1,0 +1,180 @@
+/// <section> APP
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 6rem;
+
+  // checkerboard
+  background-color: #848685;
+  background-image: linear-gradient(45deg, #797b7a 25%, transparent 25%), linear-gradient(-45deg, #797b7a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #797b7a 75%), linear-gradient(-45deg, transparent 75%, #797b7a 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
+  @media(max-width: em(1000)) {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 3rem;
+  }
+
+
+  //. <div> FRAME of the phone
+  .frame {
+    width: 37rem;
+    padding: 4rem 3.6rem 0;
+    position: relative;
+    border-top-left-radius: 3.4rem;
+    border-top-right-radius: 3.4rem;
+    background-image: linear-gradient(100deg, #3f4140 0%, #3f4140 44%, $header-color 44%);
+
+    @media(max-width: em(400)) {
+      max-width: 100%;
+    }
+
+
+    //, <div> SPEAKER in the phone
+    .speaker {
+      position: absolute;
+      top: 1.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7rem;
+      height: .8rem;
+      background-color: #151716;
+      border-radius: 1rem;
+    }
+
+    //, <div> CAMERA in the phone
+    .camera {
+      position: absolute;
+      top: 1.4rem;
+      right: 5rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #080a00;
+      border-radius: 1rem;
+
+      // LIGHT-COLORED PUPIL
+      &:after {
+        display: block;
+        width: .9rem;
+        height: .9rem;
+        content: "";
+        background-color: #f6fad7;
+        border-radius: 1rem;
+      }
+    }
+
+    //, <div> INNER FRAME of the phone
+    .inner-frame {
+      padding: .8rem .8rem 0;
+      background-color: #242b26;
+
+      .gallery {
+
+        &__item {
+          flex-basis: 33.33%;
+          &:first-child {
+            flex-basis: 66.66%;
+          }
+        }
+
+        &__tinted-glass {
+          justify-content: center;
+        }
+
+        // <button> BUTTONS
+        &__button {
+          padding: 0 .2rem;
+          margin: .5rem;
+          border-radius: .6rem;
+        }
+
+        // <i> ICONS
+        &__fas {
+          font-size: 1rem;
+        }
+
+        // <i> CHAINLINK ICON
+        &__fa-link {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  //. <div> TEXT BOX
+  &__text-box {
+    flex: 0 0 40%;
+    align-self: flex-start;
+    margin: 2rem 2rem 2rem 5rem;
+    padding: 1rem;
+    color: white;
+
+    @media(max-width: em(1000)) {
+      margin: 1rem 7rem 5rem;
+    }
+    @media(max-width: em(700)) {
+      align-self: center;
+      margin-left: 0;
+      margin-right: 0;
+      width: 36rem;
+    }
+    @media(max-width: em(400)) {
+      width: 30rem;
+    }
+  }
+
+  // <h2>
+  &__heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    letter-spacing: .1rem;
+    @media(max-width: em(700)) {
+      font-size: 2.6rem;
+    }
+    @media(max-width: em(400)) {
+      font-size: 2.2rem;
+
+    }
+  }
+
+  // <div>
+  &__description-box {
+    display: flex;
+    font-size: 1.6rem;
+
+    @media(max-width: em(700)) {
+      flex-direction: column;
+    }
+  }
+
+  // <p>
+  &__description-1 {
+    flex-basis: 60%;
+    @media(max-width: em(700)) {
+      flex: 0;
+    }
+  }
+
+  // <p>
+  &__description-2 {
+    flex-basis: 40%;
+    margin-left: 4rem;
+    @media(max-width: em(700)) {
+      flex: 0;
+      margin: 0;
+    }
+  }
+
+  // <p>
+  &__description {
+    padding: 1rem;
+  }
+}
+///

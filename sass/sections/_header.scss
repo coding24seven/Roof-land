@@ -1,0 +1,94 @@
+/// <header>
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 666;
+  padding: 0 2rem;
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $header-color;
+  border-top: 1px solid #ddd;
+
+  @media(max-width: $bp-burger) {
+    justify-content: space-between;
+  }
+  @media(max-width: em(400))  {
+    padding: 0 .7rem;
+  }
+
+  //. <a> LINK BOX FOR THE LOGO
+  &__logo-box {
+    height: 50%;
+    padding-left: 1rem;
+    z-index: 666;
+    position: relative;
+  }
+
+  //, <img> LOGO
+  &__logo {
+    height: 100%;
+  }
+
+  //. <nav> LARGE NAVIGATION MENU
+  &__nav {
+    display: flex;
+    color: white;
+
+    // hide the row-like menu at low viewport width
+    @media(max-width: $bp-burger) {
+      height: 0;
+      overflow: hidden;
+      color: transparent;
+      transform: scale(1.4);
+      position: absolute;
+      top: calc(#{$header-height} - .2rem); // position the menu direct under the header
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $header-color;
+      transition: height .15s, transform 0s .05s, color .05s;
+    }
+
+    // show full screen menu when burger is clicked and so .js-menu-on added
+    &.js-menu-on {
+      @media (max-width: $bp-burger) {
+        // animate
+        transform: scale(1);
+        transform-origin: top;
+        height: calc(100vh - #{$header-height} + .1rem);
+        color: white;
+        transition: height .2s, transform .3s, color .31s;
+      }
+    }
+  }
+
+  //, <a> each menu link when displayed in the row of the navigation menu
+  &__link {
+    padding: 0.5rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    &:hover {
+      transition: color .2s .05s;
+      color: $hover-color;
+    }
+    // 
+    @media(max-width: $bp-burger) {
+      padding: 1rem;
+      font-size: 2.2rem;
+      font-weight: 300;
+      @media(max-height: em(400)) {
+        padding: .5rem;
+      }
+    }
+  }
+}

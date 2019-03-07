@@ -1,0 +1,62 @@
+//. <a> BURGER LINK
+.burger {
+  display: none;
+  width: 3rem;
+  height: 2.13rem;
+  position: relative;
+  z-index: 666;
+  padding: 1rem;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all .2s .05s;
+  @media(max-width: $bp-burger) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // change burger appearance when it is hovered and the menu is off (.js-menu-on is false )
+  &:hover:not(.js-menu-on) {
+    &>div:nth-child(1) {
+      transform: translateY(2px);
+    }
+    &>div:nth-child(3) {
+      transform: translateY(-2px);
+    }
+  }
+
+  // change crossed-burger appearance when it is hovered and the menu is on (.js-menu-on is true )
+  &:hover.js-menu-on {
+    transform: scale(1.2);
+  }
+
+  // cross 2 bars together and hide 1 bar when burger is clicked and so .js-menu-on added
+  &.js-menu-on {
+    &>div:nth-child(1) {
+      transform: translateY(9.6px) rotate(135deg);
+    }
+    &>div:nth-child(2) {
+      transform: scale(0);
+    }
+    &>div:nth-child(3) {
+      transform: translateY(-9.6px) rotate(-135deg);
+    }
+  }
+
+  //, <div> all bars of hamburger
+  &>div {
+    width: 3rem;
+    height: .2rem;
+    background-color: white;
+    border-radius: 3px;
+  }
+  //, <div> top and bottom bars of hamburger
+  &>div:nth-child(1),
+  &>div:nth-child(3) {
+    transition: all .2s .05s ease-in-out;
+  }
+  //, <div> middle bar of hamburger
+  &>div:nth-child(2) {
+    transition: all .04s .05s;
+  }
+}

@@ -1,62 +1,112 @@
-//. <a> BURGER LINK
+///
+/// VARIABLES
+$bar-height: 5px; // height of each burger bar
+$space-between-bars: 8px; // vertical gap between bars
+
+///
+/// MIXINS
+//. CROSS THE BARS OF THE BURGER
+@mixin cross-burger-bars {
+  & > svg:nth-child(1) {
+    transform: translateY($bar-height) rotate(135deg);
+  }
+  & > svg:nth-child(2) {
+    transform: scale(0);
+  }
+  & > svg:nth-child(3) {
+    transform: translateY(-$bar-height) rotate(-135deg);
+  }
+}
+//. THICKEN THE CROSSED BARS OF THE BURGER (for non-touchscreen only)
+@mixin thicken-crossed-bars {
+  & > svg:nth-child(1) {
+    line {
+      stroke-width: calc(#{$bar-height} + 2px);
+    }
+  }
+  & > svg:nth-child(3) {
+    line {
+      stroke-width: calc(#{$bar-height} + 2px);
+    }
+  }
+}
+
+//. SHRINK THE BURGER VERTICALLY (for non-touchscreen only)
+@mixin shrink-burger {
+  & > svg:nth-child(1) {
+    transform: translateY(calc(#{$space-between-bars} / -2));
+  }
+  & > svg:nth-child(3) {
+    transform: translateY(calc(#{$space-between-bars} / 2));
+  }
+}
+
+//. GIVE BURGER ITS STARTING NEUTRAL LOOK
+@mixin normalize-burger {
+  // <svg> top bar of hamburger
+  & > svg:nth-child(1) {
+    transform: translateY(-$space-between-bars);
+  }
+  // <svg> bottom bar of hamburger
+  & > svg:nth-child(3) {
+    transform: translateY($space-between-bars);
+  }
+}
+
+///
+/// <div> || <a> || <label> BURGER
 .burger {
   display: none;
-  width: 3rem;
-  height: 2.13rem;
-  position: relative;
-  z-index: 666;
-  padding: 1rem;
-  box-sizing: content-box;
+  // transform: translate(1rem, -15%); // reposition the burger on page
+  padding: calc(#{$space-between-bars} * 2) 1rem; // give clickable size to burger as originally is has the size of the middle bar only
   cursor: pointer;
-  transition: all .2s .05s;
-  @media(max-width: $bp-burger) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  user-select: none;
+  text-decoration: none; // for a link burger only
+
+  @media (max-width: $bp-burger) {
+    display: block;
   }
+
+  // rest the burger bars at starting point
+  @include normalize-burger;
 
   // change burger appearance when it is hovered and the menu is off (.js-menu-on is false )
   &:hover:not(.js-menu-on) {
-    &>div:nth-child(1) {
-      transform: translateY(2px);
-    }
-    &>div:nth-child(3) {
-      transform: translateY(-2px);
-    }
+    //TODO: comment out on touchscreens
+    // @include shrink-burger;
   }
 
   // change crossed-burger appearance when it is hovered and the menu is on (.js-menu-on is true )
   &:hover.js-menu-on {
-    transform: scale(1.2);
+    //TODO: comment out on touchscreens
+    // @include thicken-crossed-bars;
   }
 
   // cross 2 bars together and hide 1 bar when burger is clicked and so .js-menu-on added
   &.js-menu-on {
-    &>div:nth-child(1) {
-      transform: translateY(9.6px) rotate(135deg);
-    }
-    &>div:nth-child(2) {
-      transform: scale(0);
-    }
-    &>div:nth-child(3) {
-      transform: translateY(-9.6px) rotate(-135deg);
+    @include cross-burger-bars;
+  }
+
+  //. <svg> all bars of hamburger
+  & > svg {
+    display: block;
+    height: $bar-height;
+    width: 40px;
+
+    line {
+      stroke: #f5f5f5;
+      stroke-width: $bar-height;
+      transition: all 0.09s 0.02s;
     }
   }
 
-  //, <div> all bars of hamburger
-  &>div {
-    width: 3rem;
-    height: .2rem;
-    background-color: white;
-    border-radius: 3px;
+  //. <svg> top and bottom bars of hamburger
+  & > svg:nth-child(1),
+  & > svg:nth-child(3) {
+    transition: all 0.09s 0.02s ease-in-out;
   }
-  //, <div> top and bottom bars of hamburger
-  &>div:nth-child(1),
-  &>div:nth-child(3) {
-    transition: all .2s .05s ease-in-out;
-  }
-  //, <div> middle bar of hamburger
-  &>div:nth-child(2) {
-    transition: all .04s .05s;
+  //. <svg> middle bar of hamburger
+  & > svg:nth-child(2) {
+    transition: all 0.04s 0.02s;
   }
 }

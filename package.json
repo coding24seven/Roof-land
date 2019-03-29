@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel devserver watch:sass",
-    "devserver": "live-server --host=192.168.1.10 --port=9345 --no-css-inject --no-browser --verbose --wait=1500",
+    "devserver": "live-server --host=192.168.1.10 --port=9348 --no-css-inject --no-browser --verbose --wait=1500",
     "watch:sass": "node-sass sass/main.scss css/style.css -rw --output-style expanded --source-comments",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",

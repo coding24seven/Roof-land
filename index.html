@@ -1,524 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous" />
 
-    <title>Project name &ndash; project purpose</title>
-  </head>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
 
-  <body>
-    <!--/ .header -->
-    <header class="header">
-      <!-- LOGO -->
-      <a class="header__logo-box" href="/">
-        <img class="header__logo" src="img/logo.png" alt="logo" />
-      </a>
+  <title>Project name &ndash; project purpose</title>
+</head>
 
-      <!-- NAVBAR MENU -->
-      <nav class="header__nav" id="menu">
-        <a class="header__link" href="#">Home</a>
-        <a class="header__link" href="#projects">Projects</a>
-        <a class="header__link" href="#team">Roofers</a>
-        <a class="header__link" href="#app">App</a>
-        <a class="header__link" href="#stats">Stats</a>
-        <a class="header__link" href="#footer">Contact</a>
-      </nav>
+<body>
+  <!--/ .header -->
+  <header class="header">
+    <!-- LOGO -->
+    <a class="header__logo-box" href="./">
+      <img class="header__logo" src="img/logo.png" alt="logo" />
+    </a>
 
-      <!-- BURGER WITH JS TOGGLE SWITCH FOR THE MENU -->
-      <a class="burger" href="#">
-        <div></div>
-        <div></div>
-        <div></div>
-        <!-- three hamburger bars -->
-      </a>
-    </header>
+    <!-- NAVBAR MENU -->
+    <nav class="header__nav" id="menu">
+      <a class="header__link" href="#">Home</a>
+      <a class="header__link" href="#projects">Projects</a>
+      <a class="header__link" href="#team">Roofers</a>
+      <a class="header__link" href="#app">App</a>
+      <a class="header__link" href="#stats">Stats</a>
+      <a class="header__link" href="#footer">Contact</a>
+    </nav>
 
-    <!--/ SLOGAN -->
-    <section class="slogan">
-      <!--, container for photos that overlap and come through in sequence, and circular selectors -->
-      <div class="slogan__photo-box">
-        <!-- photos -->
-        <img class="slogan__photo slogan__photo-1" src="img/roof-panels.jpg" alt="roof" />
-        <img class="slogan__photo slogan__photo-2" src="img/roofers.jpg" alt="roof" />
-        <img class="slogan__photo slogan__photo-3" src="img/city.jpg" alt="roof" />
+    <!-- BURGER WITH JS TOGGLE SWITCH FOR THE MENU -->
+    <a class="burger" href="#">
+      <svg>
+        <line x1="0" y1="0" x2="40" y2="0" />
+      </svg>
+      <svg>
+        <line x1="0" y1="0" x2="40" y2="0" />
+      </svg>
+      <svg>
+        <line x1="0" y1="0" x2="40" y2="0" />
+      </svg>
+      <!-- three hamburger bars -->
+    </a>
+  </header>
 
-        <!-- small round selectors for the photos -->
-        <div class="slogan__photo-selector-box">
-          <div class="slogan__photo-selector slogan__photo-selector-1"></div>
-          <div class="slogan__photo-selector slogan__photo-selector-2"></div>
-          <div class="slogan__photo-selector slogan__photo-selector-3"></div>
+  <!--/ SLOGAN -->
+  <section class="slogan">
+    <!--, container for photos that overlap and come through in sequence, and circular selectors -->
+    <div class="slogan__photo-box">
+      <!-- photos -->
+      <img class="slogan__photo slogan__photo-1" src="img/roof-panels.jpg" alt="roof" />
+      <img class="slogan__photo slogan__photo-2" src="img/roofers.jpg" alt="roof" />
+      <img class="slogan__photo slogan__photo-3" src="img/city.jpg" alt="roof" />
+
+      <!-- small round selectors for the photos -->
+      <div class="slogan__photo-selector-box">
+        <div class="slogan__photo-selector slogan__photo-selector-1"></div>
+        <div class="slogan__photo-selector slogan__photo-selector-2"></div>
+        <div class="slogan__photo-selector slogan__photo-selector-3"></div>
+      </div>
+    </div>
+
+    <!--, text box containing the slogan -->
+    <div class="slogan__text-box">
+      <h1 class="slogan__text">
+        <span>Driving back cloudbursts</span>
+        <span>since 1997</span>
+      </h1>
+    </div>
+  </section>
+
+  <!--/ .container 1 -->
+  <main class="container">
+    <!--. SERVICES repair replacement cleaning maintenance, schedule a free estimate -->
+    <section class="services">
+      <!-- DESIGN -->
+      <div class="services__type">
+        <div class="services__icon-and-heading-box">
+          <svg class="services__icon">
+            <use xlink:href="img/symbol-defs.svg#icon-pencil2"></use>
+          </svg>
+          <h3 class="services__heading">design</h3>
         </div>
+
+        <p class="services__description">
+          We will design a roof for you so that it will outlast the walls of your home.
+        </p>
       </div>
 
-      <!--, text box containing the slogan -->
-      <div class="slogan__text-box">
-        <h1 class="slogan__text">
-          <span>Driving back cloudbursts</span>
-          <span>since 1997</span>
-        </h1>
+      <!-- INSTALLATION -->
+      <div class="services__type">
+        <div class="services__icon-and-heading-box">
+          <svg class="services__icon">
+            <use xlink:href="img/symbol-defs.svg#icon-hammer"></use>
+          </svg>
+          <h3 class="services__heading">installation</h3>
+        </div>
+
+        <p class="services__description">
+          Quickly and painlessly, while you sip your tea, that's how we go about it.
+        </p>
+      </div>
+
+      <!-- MAINTENANCE -->
+      <div class="services__type">
+        <div class="services__icon-and-heading-box">
+          <svg class="services__icon">
+            <use xlink:href="img/symbol-defs.svg#icon-wrench2"></use>
+          </svg>
+          <h3 class="services__heading">maintenance</h3>
+        </div>
+
+        <p class="services__description">
+          Our roofers are not allergic to rust and will chase it off your property.
+        </p>
       </div>
     </section>
+  </main>
+  <!--/ .container 1 ends -->
 
-    <!--/ .container 1 -->
-    <main class="container">
-      <!--. SERVICES repair replacement cleaning maintenance, schedule a free estimate -->
-      <section class="services">
-        <!-- DESIGN -->
-        <div class="services__type">
-          <div class="services__icon-and-heading-box">
-            <svg class="services__icon">
-              <use xlink:href="img/symbol-defs.svg#icon-pencil2"></use>
+  <!--. FEATURED : contains heading, description, gallery -->
+  <section class="featured" id="projects">
+    <h2 class="featured__heading">Projects We Completed</h2>
+    <p class="featured__description">
+      What you're seeing are some of our finest accomplishments to date.
+    </p>
+    <div class="gallery">
+      <figure class="gallery__item">
+        <img src="img/878wf.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/j7g8.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/9kdb.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/n73dj.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/roof-tile-847.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/9j3nb.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/kn3nj.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/k83hd.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/k83.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+
+      <figure class="gallery__item">
+        <img src="img/93ijd.jpg" alt="" class="gallery__photo" />
+        <div class="gallery__tinted-glass">
+          <button class="gallery__button">
+            <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+          </button>
+          <button class="gallery__button">
+            <i class="gallery__fas fas fa-search"></i>
+          </button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!--/ .container 2 -->
+  <main class="container">
+    <!--. TEAM : contains team members' headshots  -->
+    <section class="team" id="team">
+      <h2 class="team__heading">Our Roofers</h2>
+
+      <div class="team__items">
+        <div class="item-box">
+          <figure class="item">
+            <img class="photo" src="img/planner.jpg" alt="" />
+            <div class="occupation-background"></div>
+            <figcaption class="occupation">Roof-planner</figcaption>
+          </figure>
+          <p class="name">Torv Silkmanner</p>
+        </div>
+
+        <div class="item-box">
+          <figure class="item">
+            <img class="photo" src="img/boorek.jpg" alt="" />
+            <div class="occupation-background"></div>
+            <figcaption class="occupation">Roof-majster</figcaption>
+          </figure>
+          <p class="name">Mustafa Perez</p>
+        </div>
+
+        <div class="item-box">
+          <figure class="item">
+            <img class="photo" src="img/chick.jpg" alt="" />
+            <div class="occupation-background"></div>
+            <figcaption class="occupation">Roof-blesser</figcaption>
+          </figure>
+          <p class="name">Mary Xian Yu</p>
+        </div>
+
+        <div class="item-box">
+          <figure class="item">
+            <img class="photo" src="img/Jerry.jpg" alt="" />
+            <div class="occupation-background"></div>
+            <figcaption class="occupation">Roof-tester</figcaption>
+          </figure>
+          <p class="name">Jerry Pinkyard</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--/ .container 2 ends -->
+
+  <!--. APP - phone with a gallery, app info -->
+  <section class="app" id="app">
+    <div class="frame">
+      <div class="speaker"></div>
+      <div class="camera"></div>
+      <div class="inner-frame">
+        <div class="gallery">
+          <figure class="gallery__item">
+            <img src="img/roof-tile-847.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/878wf.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/j7g8.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/93ijd.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/9kdb.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/n73dj.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/kn3nj.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="img/k83hd.jpg" alt="" class="gallery__photo" />
+            <div class="gallery__tinted-glass">
+              <button class="gallery__button">
+                <i class="gallery__fas fas gallery__fa-link fa-link"></i>
+              </button>
+              <button class="gallery__button">
+                <i class="gallery__fas fas fa-search"></i>
+              </button>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="app__text-box">
+      <h2 class="app__heading">Download our app!</h2>
+      <div class="app__description-box">
+        <p class="app__description app__description-1">
+          Browse our products and services with our convenient app. Browse our products and
+          services with our convenient app. Browse our products and services with our convenient
+          app. Browse our products and services.
+        </p>
+        <p class="app__description app__description-2">
+          Order your new roof with a single click. Order your new roof with a single click. Order
+          your new roof with a single click now!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--/ .container 2 -->
+  <main class="container">
+    <!--. STATS : number of followers, etc. -->
+    <section class="stats" id="stats">
+      <div class="stats__box">
+        <div class="stats__value">3859</div>
+        <div class="stats__key">Happy Clients</div>
+      </div>
+      <div class="stats__box">
+        <div class="stats__value">5932</div>
+        <div class="stats__key">Projects</div>
+      </div>
+      <div class="stats__box">
+        <div class="stats__value">9371</div>
+        <div class="stats__key">Followers</div>
+      </div>
+      <div class="stats__box">
+        <div class="stats__value">1997</div>
+        <div class="stats__key">Since</div>
+      </div>
+    </section>
+  </main>
+  <!--/ .container 2 ends -->
+  <!--. FOOTER -->
+  <section class="footer" id="footer">
+    <div class="footer__info">
+      <div class="footer__box">
+        <h4 class="footer__heading">About Us</h4>
+        <p class="footer__description">
+          Headquartered in Hong Kong, Ontario, and São Paulo, we are an international company
+          specializing in roof design, manufacture, installation, and maintenance.
+        </p>
+      </div>
+
+      <div class="footer__box">
+        <h4 class="footer__heading">Get in Touch</h4>
+        <table class="footer__contact-data">
+          <tr>
+            <td class="key">Address:</td>
+            <td class="value">957 Sai Wang Pun, Hong Kong</td>
+          </tr>
+          <tr>
+            <td class="key">Phone:</td>
+            <td class="value">+85 239 212 782</td>
+          </tr>
+          <tr>
+            <td class="key">Email:</td>
+            <td class="value">info@roofland.hk</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="footer__box">
+        <h4 class="footer__heading">Social Media</h4>
+        <p class="footer__description">Connnect with us on your favorite social media:</p>
+        <div class="footer__social-media-icons-box">
+          <div class="footer__social-media-icon-box">
+            <svg class="footer__social-media-icon">
+              <use xlink:href="img/symbol-defs.svg#icon-youtube"></use>
             </svg>
-            <h3 class="services__heading">design</h3>
           </div>
-
-          <p class="services__description">
-            We will design a roof for you so that it will outlast the walls of your home.
-          </p>
-        </div>
-
-        <!-- INSTALLATION -->
-        <div class="services__type">
-          <div class="services__icon-and-heading-box">
-            <svg class="services__icon">
-              <use xlink:href="img/symbol-defs.svg#icon-hammer"></use>
+          <div class="footer__social-media-icon-box">
+            <svg class="footer__social-media-icon">
+              <use xlink:href="img/symbol-defs.svg#icon-google-plus"></use>
             </svg>
-            <h3 class="services__heading">installation</h3>
           </div>
-
-          <p class="services__description">
-            Quickly and painlessly, while you sip your tea, that's how we go about it.
-          </p>
-        </div>
-
-        <!-- MAINTENANCE -->
-        <div class="services__type">
-          <div class="services__icon-and-heading-box">
-            <svg class="services__icon">
-              <use xlink:href="img/symbol-defs.svg#icon-wrench2"></use>
+          <div class="footer__social-media-icon-box">
+            <svg class="footer__social-media-icon">
+              <use xlink:href="img/symbol-defs.svg#icon-facebook"></use>
             </svg>
-            <h3 class="services__heading">maintenance</h3>
           </div>
-
-          <p class="services__description">
-            Our roofers are not allergic to rust and will chase it off your property.
-          </p>
-        </div>
-      </section>
-    </main>
-    <!--/ .container 1 ends -->
-
-    <!--. FEATURED : contains heading, description, gallery -->
-    <section class="featured" id="projects">
-      <h2 class="featured__heading">Projects We Completed</h2>
-      <p class="featured__description">
-        What you're seeing are some of our finest accomplishments to date.
-      </p>
-      <div class="gallery">
-        <figure class="gallery__item">
-          <img src="img/878wf.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
+          <div class="footer__social-media-icon-box">
+            <svg class="footer__social-media-icon">
+              <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+            </svg>
           </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/j7g8.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/9kdb.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/n73dj.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/roof-tile-847.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/9j3nb.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/kn3nj.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/k83hd.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/k83.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-
-        <figure class="gallery__item">
-          <img src="img/93ijd.jpg" alt="" class="gallery__photo" />
-          <div class="gallery__tinted-glass">
-            <button class="gallery__button">
-              <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-            </button>
-            <button class="gallery__button">
-              <i class="gallery__fas fas fa-search"></i>
-            </button>
-          </div>
-        </figure>
-      </div>
-    </section>
-
-    <!--/ .container 2 -->
-    <main class="container">
-      <!--. TEAM : contains team members' headshots  -->
-      <section class="team" id="team">
-        <h2 class="team__heading">Our Roofers</h2>
-
-        <div class="team__items">
-          <div class="item-box">
-            <figure class="item">
-              <img class="photo" src="img/planner.jpg" alt="" />
-              <div class="occupation-background"></div>
-              <figcaption class="occupation">Roof-planner</figcaption>
-            </figure>
-            <p class="name">Torv Silkmanner</p>
-          </div>
-
-          <div class="item-box">
-            <figure class="item">
-              <img class="photo" src="img/boorek.jpg" alt="" />
-              <div class="occupation-background"></div>
-              <figcaption class="occupation">Roof-majster</figcaption>
-            </figure>
-            <p class="name">Mustafa Perez</p>
-          </div>
-
-          <div class="item-box">
-            <figure class="item">
-              <img class="photo" src="img/chick.jpg" alt="" />
-              <div class="occupation-background"></div>
-              <figcaption class="occupation">Roof-blesser</figcaption>
-            </figure>
-            <p class="name">Mary Xian Yu</p>
-          </div>
-
-          <div class="item-box">
-            <figure class="item">
-              <img class="photo" src="img/Jerry.jpg" alt="" />
-              <div class="occupation-background"></div>
-              <figcaption class="occupation">Roof-tester</figcaption>
-            </figure>
-            <p class="name">Jerry Pinkyard</p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!--/ .container 2 ends -->
-
-    <!--. APP - phone with a gallery, app info -->
-    <section class="app" id="app">
-      <div class="frame">
-        <div class="speaker"></div>
-        <div class="camera"></div>
-        <div class="inner-frame">
-          <div class="gallery">
-            <figure class="gallery__item">
-              <img src="img/roof-tile-847.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/878wf.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/j7g8.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/93ijd.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/9kdb.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/n73dj.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/kn3nj.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
-
-            <figure class="gallery__item">
-              <img src="img/k83hd.jpg" alt="" class="gallery__photo" />
-              <div class="gallery__tinted-glass">
-                <button class="gallery__button">
-                  <i class="gallery__fas fas gallery__fa-link fa-link"></i>
-                </button>
-                <button class="gallery__button">
-                  <i class="gallery__fas fas fa-search"></i>
-                </button>
-              </div>
-            </figure>
+          <div class="footer__social-media-icon-box">
+            <svg class="footer__social-media-icon">
+              <use xlink:href="img/symbol-defs.svg#icon-instagram"></use>
+            </svg>
           </div>
         </div>
       </div>
-      <div class="app__text-box">
-        <h2 class="app__heading">Download our app!</h2>
-        <div class="app__description-box">
-          <p class="app__description app__description-1">
-            Browse our products and services with our convenient app. Browse our products and
-            services with our convenient app. Browse our products and services with our convenient
-            app. Browse our products and services.
-          </p>
-          <p class="app__description app__description-2">
-            Order your new roof with a single click. Order your new roof with a single click. Order
-            your new roof with a single click now!
-          </p>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <!--/ .container 2 -->
-    <main class="container">
-      <!--. STATS : number of followers, etc. -->
-      <section class="stats" id="stats">
-        <div class="stats__box">
-          <div class="stats__value">3859</div>
-          <div class="stats__key">Happy Clients</div>
-        </div>
-        <div class="stats__box">
-          <div class="stats__value">5932</div>
-          <div class="stats__key">Projects</div>
-        </div>
-        <div class="stats__box">
-          <div class="stats__value">9371</div>
-          <div class="stats__key">Followers</div>
-        </div>
-        <div class="stats__box">
-          <div class="stats__value">1997</div>
-          <div class="stats__key">Since</div>
-        </div>
-      </section>
-    </main>
-    <!--/ .container 2 ends -->
-    <!--. FOOTER -->
-    <section class="footer" id="footer">
-      <div class="footer__info">
-        <div class="footer__box">
-          <h4 class="footer__heading">About Us</h4>
-          <p class="footer__description">
-            Headquartered in Hong Kong, Ontario, and São Paulo, we are an international company
-            specializing in roof design, manufacture, installation, and maintenance.
-          </p>
-        </div>
+    <p class="footer__copyright">&copy; 2019 AW. All rights reserved.</p>
+  </section>
 
-        <div class="footer__box">
-          <h4 class="footer__heading">Get in Touch</h4>
-          <table class="footer__contact-data">
-            <tr>
-              <td class="key">Address:</td>
-              <td class="value">957 Sai Wang Pun, Hong Kong</td>
-            </tr>
-            <tr>
-              <td class="key">Phone:</td>
-              <td class="value">+85 239 212 782</td>
-            </tr>
-            <tr>
-              <td class="key">Email:</td>
-              <td class="value">info@roofland.hk</td>
-            </tr>
-          </table>
-        </div>
+  <!--/ JAVASCRIPT -->
+  <script src="js/variables.js"></script>
+  <script src="js/State.js"></script>
+  <script src="js/Elements.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/eventListeners.js"></script>
+</body>
 
-        <div class="footer__box">
-          <h4 class="footer__heading">Social Media</h4>
-          <p class="footer__description">Connnect with us on your favorite social media:</p>
-          <div class="footer__social-media-icons-box">
-            <div class="footer__social-media-icon-box">
-              <svg class="footer__social-media-icon">
-                <use xlink:href="img/symbol-defs.svg#icon-youtube"></use>
-              </svg>
-            </div>
-            <div class="footer__social-media-icon-box">
-              <svg class="footer__social-media-icon">
-                <use xlink:href="img/symbol-defs.svg#icon-google-plus"></use>
-              </svg>
-            </div>
-            <div class="footer__social-media-icon-box">
-              <svg class="footer__social-media-icon">
-                <use xlink:href="img/symbol-defs.svg#icon-facebook"></use>
-              </svg>
-            </div>
-            <div class="footer__social-media-icon-box">
-              <svg class="footer__social-media-icon">
-                <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
-              </svg>
-            </div>
-            <div class="footer__social-media-icon-box">
-              <svg class="footer__social-media-icon">
-                <use xlink:href="img/symbol-defs.svg#icon-instagram"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="footer__copyright">&copy; 2019 AW. All rights reserved.</p>
-    </section>
-
-    <!--/ JAVASCRIPT -->
-    <script src="js/variables.js"></script>
-    <script src="js/State.js"></script>
-    <script src="js/Elements.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/eventListeners.js"></script>
-  </body>
 </html>
